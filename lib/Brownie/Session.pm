@@ -111,7 +111,7 @@ sub current_node {
 
 sub document { shift->driver->find('/html') }
 
-sub find  { $_[0]->current_node->find($_[1])  }
+sub find  { my $ret = $_[0]->current_node->find($_[1]); $ret  }
 sub first { $_[0]->current_node->first($_[1]) }
 sub all   { $_[0]->current_node->all($_[1])   }
 
